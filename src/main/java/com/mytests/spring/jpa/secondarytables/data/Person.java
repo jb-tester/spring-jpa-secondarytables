@@ -9,7 +9,7 @@ import javax.persistence.*;
  * *
  */
 @Entity
-@Table(name = "person")
+@Table(name = "PERSON")
 @SecondaryTable(name = "ADDRESS", pkJoinColumns = @PrimaryKeyJoinColumn(name = "ID") )
 @SecondaryTable(name = "EMPLOYMENT",pkJoinColumns = @PrimaryKeyJoinColumn(name = "ID") )
 @SecondaryTable(name = "CONTACT", pkJoinColumns = @PrimaryKeyJoinColumn(name = "ID"))

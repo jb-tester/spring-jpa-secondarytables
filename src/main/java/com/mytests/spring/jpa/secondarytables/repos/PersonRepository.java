@@ -1,7 +1,11 @@
 package com.mytests.spring.jpa.secondarytables.repos;
 
 import com.mytests.spring.jpa.secondarytables.data.Person;
+import com.mytests.spring.jpa.secondarytables.dto.PersonDTO;
+import com.mytests.spring.jpa.secondarytables.dto.PersonProjection;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
 
 /**
  * *
@@ -10,5 +14,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * *
  */
 public interface PersonRepository extends JpaRepository<Person,Integer> {
-    
+    List<PersonProjection> findAllByCompany(String company);
+
+    List<PersonDTO> findAllByTitle(String title);
 }
