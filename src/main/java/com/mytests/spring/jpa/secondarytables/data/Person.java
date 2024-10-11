@@ -1,6 +1,6 @@
 package com.mytests.spring.jpa.secondarytables.data;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 /**
  * *

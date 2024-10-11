@@ -1,7 +1,7 @@
 package com.mytests.spring.jpa.secondarytables.data;
 
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
 
 /**
  * *
