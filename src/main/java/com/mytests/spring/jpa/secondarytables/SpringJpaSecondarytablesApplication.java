@@ -28,5 +28,18 @@ public class SpringJpaSecondarytablesApplication implements CommandLineRunner {
         for (PersonDTO dto : repo.findAllByTitle("developer")) {
             System.out.println(dto);
         }
+        for (PersonDTO dto : repo.searchDistinctByAgeGreaterThanEqual(20)) {
+            System.out.println(dto);}
+        for (PersonProjection person : repo.queryByName("ira")) {
+            System.out.println(person.getName() + " " + person.getSurname());}
+        for (Person person : repo.readById(1)) {
+            System.out.println(person);
+        }
+        for (Person person : repo.streamAllByName("john")) {
+            System.out.println(person);}
+        for (Person person : repo.findByAddress_City("prague")) {
+            System.out.println(person);}
+        System.out.println(repo.existsPeopleByAddressIsNull());
+        repo.removeByCompanyNot("jetbrains");
     }
 }
